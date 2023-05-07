@@ -2,7 +2,6 @@ import socket
 ServerName = '127.0.0.1'
 ServerPort = 1234
 
-
 ServerSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ServerSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 ServerSocket.bind((ServerName, ServerPort))
@@ -21,11 +20,11 @@ while True:
     file = ""
    
     if rute == '/':
-        file = 'fileisi1.html'
+        file = 'fileisi.html'
     elif rute == "/dian" :
-        file = "fileisi2.html"
+        file = "dian.html"
     elif rute == "/shasa" :
-        file = "fileisi3.html"
+        file = "shasa.html"
     try:
         BukaFile = open(file)
         content = BukaFile.read()
